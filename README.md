@@ -1,1 +1,0 @@
-# dvm_typing_speed
