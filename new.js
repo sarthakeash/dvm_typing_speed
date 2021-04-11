@@ -15,7 +15,7 @@ document.getElementById("words").style.visibility="hidden";
 document.querySelector(".start").style.visibility="hidden";
 
 
-}, 2000);}
+}, 60000);}
 
 document.querySelector(".but").addEventListener("click", myf1);
 
