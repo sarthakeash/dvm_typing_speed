@@ -1,9 +1,6 @@
-
 document.getElementById("final").classList.add("final2");
 
 document.querySelector(".but").addEventListener("click", myf);
-
-
 
 function myf(){
 setTimeout(
@@ -15,17 +12,12 @@ document.getElementById("final").classList.remove("final2");
 document.getElementById("final").classList.add("final1");
 document.getElementById("timer").style.visibility="hidden";
 document.getElementById("words").style.visibility="hidden";
+document.querySelector(".start").style.visibility="hidden";
 
 
-}, 60000);}
-
-
+}, 2000);}
 
 document.querySelector(".but").addEventListener("click", myf1);
-
-
-  
-
 
 
 function myf1(){
@@ -35,20 +27,18 @@ function myf1(){
   const timerElement = document.getElementById('timer');
 
 
-
-
-
   let startTime;
   function startTimer() {
-    timerElement.innerText = 0;
+    timerElement.innerText = "00";
     startTime = new Date();
     setInterval(() => {
       timer.innerText = getTimerTime()
     }, 1000)
   }
   
-  function getTimerTime() {
-    return Math.floor((new Date() - startTime) / 1000)
+  function getTimerTime() { if(Math.floor((new Date() - startTime) / 1000) < 10)
+    return '0' + Math.floor((new Date() - startTime) / 1000);
+    else return  Math.floor((new Date() - startTime) / 1000);
   }
   
   startTimer();
@@ -97,8 +87,10 @@ function myf1(){
    
  
   }
-  
-  
   renderNewtext()
    
+    }
+
+    function refresh(){
+      window.location.reload();
     }
